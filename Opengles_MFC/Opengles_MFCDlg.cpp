@@ -70,6 +70,7 @@ BEGIN_MESSAGE_MAP(COpenglesMFCDlg, CDialogEx)
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
 	ON_BN_CLICKED(IDC_LOADFILE, &COpenglesMFCDlg::OnBnClickedLoadfile)
+	ON_BN_CLICKED(IDC_BUTTON1, &COpenglesMFCDlg::OnBnClickedButton1)
 END_MESSAGE_MAP()
 
 
@@ -194,4 +195,40 @@ void COpenglesMFCDlg::OnBnClickedLoadfile()
 			delete []tmp;
 		}
 	}
+}
+
+
+void COpenglesMFCDlg::OnBnClickedButton1()
+{
+	// TODO: 在此添加控件通知处理程序代码
+
+	CFileDialog dlg(TRUE);
+	if (dlg.DoModal() == IDOK) {
+		std::ifstream fin(dlg.GetPathName(), std::ios::binary);
+		if (fin.is_open()) {
+			// 移动文件指针到文件末尾
+			fin.seekg(0, std::ios::end);
+			size_t length = fin.tellg(); // 获取当前位置的偏移量，即文件长度
+
+			// 如果需要继续读取文件，可以将指针重置到开头
+			fin.seekg(0, std::ios::beg);
+			int w = 352;
+			int h = 288;
+			int size = w * h * 3 / 2;
+			if (size > length) {
+				AfxMessageBox(L"Read cif.yuv error");
+
+				fin.close();
+				return;
+			}
+			char* tmp = new char[size];
+			fin.read(tmp, size);
+			fin.close();
+
+			m_inst.DrawYUV((uint8_t*)tmp, w, h, TRUE);
+			
+			delete[]tmp;
+		}
+	}
+
 }

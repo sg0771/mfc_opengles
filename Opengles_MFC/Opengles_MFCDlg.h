@@ -52,37 +52,34 @@ class COpenglesMFCDlg : public CDialogEx
 		EGLContext  m_context = EGL_NO_CONTEXT;
 		EGLDisplay  m_display = EGL_NO_DISPLAY;
 
-		GLuint  m_programObject = 0;
-		GLint   m_samplerLoc = 0;
-		GLuint  m_textureId = 0;
+		GLuint  m_programRGB = 0;
+		GLint   m_samplerRGB = 0;
 
+		GLuint  m_programYUV = 0;
+		GLint   m_samplerY = 0;
+		GLint   m_samplerU = 0;
+		GLint   m_samplerV = 0;
+		enum {
+			TEX_Y = 0,
+			TEX_U = 1,
+			TEX_V = 2,
+		};
+		GLuint  m_textureId[4] = { 0 };
+
+		//加载RGB/RGBA 数据到 texture 并渲染到HWND
 		void    DrawRGB(uint8_t* pixels, int w, int h, int ch, int bFixed) {
-			
-			// Use tightly packed data
 			glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
 
-			// Generate a texture object
-			glGenTextures(1, &m_textureId);
-
-			// Bind the texture object
-			glBindTexture(GL_TEXTURE_2D, m_textureId);
+			glBindTexture(GL_TEXTURE_2D, m_textureId[TEX_Y]);
 
 			// Load the texture
 			if(ch == 3)
 				glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, w, h, 0, GL_RGB, GL_UNSIGNED_BYTE, pixels);
 			else
 				glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, w, h, 0, GL_RGBA, GL_UNSIGNED_BYTE, pixels);
-
-			// Set the filtering mode
 			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
-			//glClearColor(1.0f, 1.0f, 1.0f, 0.0f);
-
-			RenderRGB(w, h, bFixed);
-		}
-
-		void    RenderRGB(int w, int h, int bFixed) {
 			GLfloat vVertices[] = { -1.0f,  1.0f, 0.0f,  // Position 0
 							   0.0f,  0.0f,        // TexCoord 0 
 							  -1.0f, -1.0f, 0.0f,  // Position 1
@@ -92,7 +89,7 @@ class COpenglesMFCDlg : public CDialogEx
 							   1.0f,  1.0f, 0.0f,  // Position 3
 							   1.0f,  0.0f         // TexCoord 3
 			};
-	
+
 
 			// Set the viewport
 			//类似于BackBuffer Size
@@ -101,7 +98,7 @@ class COpenglesMFCDlg : public CDialogEx
 				int dy = 0;
 				GetXY(w, h, m_width, m_height, dx, dy);
 
-				glViewport(dx, dy, m_width-2*dx, m_height- 2*dy);//设置在窗口的显示区域
+				glViewport(dx, dy, m_width - 2 * dx, m_height - 2 * dy);//设置在窗口的显示区域
 			}
 			else
 				glViewport(0, 0, m_width, m_height);//设置在窗口的显示区域
@@ -110,7 +107,7 @@ class COpenglesMFCDlg : public CDialogEx
 			glClear(GL_COLOR_BUFFER_BIT);
 
 			// Use the program object
-			glUseProgram(m_programObject);
+			glUseProgram(m_programRGB);
 
 			// Load the vertex position
 			glVertexAttribPointer(0, 3, GL_FLOAT,
@@ -121,12 +118,17 @@ class COpenglesMFCDlg : public CDialogEx
 			glEnableVertexAttribArray(0);
 			glEnableVertexAttribArray(1);
 			glActiveTexture(GL_TEXTURE0);
-			glBindTexture(GL_TEXTURE_2D, m_textureId);
-			glUniform1i(m_samplerLoc, 0);
+			glBindTexture(GL_TEXTURE_2D, m_textureId[TEX_Y]);
+			glUniform1i(m_samplerRGB, 0);
 			GLushort indices[] = { 0, 1, 2, 0, 2, 3 };
 			glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_SHORT, indices);
 			//考虑导出
 			eglSwapBuffers(m_display, m_surface);//渲染缓存,渲染到HWND
+		}
+
+		//加载RGB/RGBA 数据到 texture 并渲染到HWND
+		void    DrawYUV(uint8_t* pixels, int w, int h,  int bFixed) {
+
 		}
 
 		bool    Init(HWND hwnd)
@@ -172,37 +174,59 @@ class COpenglesMFCDlg : public CDialogEx
 			eglQuerySurface(m_display, m_surface, EGL_WIDTH, &m_width);
 			eglQuerySurface(m_display, m_surface, EGL_HEIGHT, &m_height);
 
-			char vShaderStr[] =
-				"#version 300 es                            \n"
-				"layout(location = 0) in vec4 a_position;   \n"
-				"layout(location = 1) in vec2 a_texCoord;   \n"
-				"out vec2 v_texCoord;                       \n"
-				"void main()                                \n"
-				"{                                          \n"
-				"   gl_Position = a_position;               \n"
-				"   v_texCoord = a_texCoord;                \n"
-				"}                                          \n";
+			char vsh[] =
+				"#version 300 es \n"
+				"layout(location = 0) in vec4 a_position; \n"
+				"layout(location = 1) in vec2 a_texCoord; \n"
+				"out vec2 v_texCoord; \n"
+				"void main() {\n"
+				"	gl_Position = a_position; \n"
+				"	v_texCoord = a_texCoord; \n"
+				"}";
 
-			char fShaderStr[] =
-				"#version 300 es                                     \n"
-				"precision mediump float;                            \n"
-				"in vec2 v_texCoord;                                 \n"
-				"layout(location = 0) out vec4 outColor;             \n"
-				"uniform sampler2D s_texture;                        \n"
+			char fsh_RGB[] ="#version 300 es\n"
+				"precision highp  float; \n"
+				"in vec2 v_texCoord; \n"
+				"out vec4 out_FragColor; \n"
+				"uniform sampler2D SamplerY;                            \n"
 				"void main()                                         \n"
 				"{                                                   \n"
-				"  outColor = texture( s_texture, v_texCoord );      \n"
+				"  out_FragColor = texture( SamplerY, v_texCoord );      \n"
 				"}                                                   \n";
 
+			char fsh_YUV[] = "#version 300 es\n"
+			"precision highp  float; \n"
+				"in vec2 v_texCoord; \n"
+				"out vec4 out_FragColor; \n"
+				"uniform sampler2D SamplerY; \n"
+				"uniform sampler2D SamplerU; \n"
+				"uniform sampler2D SamplerV; \n"
+				"void main() {\n"
+				"	vec3 yuv; \n"
+				"	vec3 rgb; \n"
+				"	yuv.x = texture(SamplerY, v_texCoord).x; \n"
+				"	yuv.y = texture(SamplerU, v_texCoord).x - 0.5; \n"
+				"	yuv.z = texture(SamplerV, v_texCoord).x - 0.5; \n"
+				"	rgb = mat3(\n"
+				"		1, 1, 1, \n"
+				"		0, -0.39465, 2.03211, \n"
+				"		1.13983, -0.58060, 0\n"
+				"	) * yuv; \n"
+				"out_FragColor = vec4(rgb, 1); \n"
+				"}											\n";
+
+			m_programYUV = esLoadProgram(vsh, fsh_YUV);
+			m_samplerY = glGetUniformLocation(m_programYUV, "SamplerY");
+			m_samplerU = glGetUniformLocation(m_programYUV, "SamplerU");
+			m_samplerV = glGetUniformLocation(m_programYUV, "SamplerV");
+
 			// Load the shaders and get a linked program object
-			m_programObject = esLoadProgram(vShaderStr, fShaderStr);
+			m_programRGB = esLoadProgram(vsh, fsh_RGB);
+			m_samplerRGB = glGetUniformLocation(m_programRGB, "SamplerY");
 
-			// Get the sampler location
-			m_samplerLoc = glGetUniformLocation(m_programObject, "s_texture");
-
+			glGenTextures(4, m_textureId);
 
 			return  true;
-
 		}
 
 		void    Deinit()
@@ -223,7 +247,10 @@ class COpenglesMFCDlg : public CDialogEx
 			m_display = EGL_NO_DISPLAY;
 			m_context = EGL_NO_CONTEXT;
 			m_surface = EGL_NO_SURFACE;
-			m_textureId = 0;
+			m_textureId[0] = 0;
+			m_textureId[1] = 0;	
+			m_textureId[2] = 0;
+			m_textureId[3] = 0;
 		}
 	};
 
@@ -253,4 +280,5 @@ protected:
 	DECLARE_MESSAGE_MAP()
 public:
 	afx_msg void OnBnClickedLoadfile();
+	afx_msg void OnBnClickedButton1();
 };
