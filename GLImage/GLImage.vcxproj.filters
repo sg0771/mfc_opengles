@@ -1,0 +1,561 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="core\core_framebuffer.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\core_framebuffer_cache.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\core_gl_program.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\core_gpupixel_context.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\beauty_face_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\beauty_face_unit_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\bilateral_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\box_blur_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\box_difference_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\box_high_pass_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\box_mono_blur_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\brightness_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\canny_edge_detection_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\color_invert_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\color_matrix_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\contrast_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\convolution3x3_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\crosshatch_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\directional_non_maximum_suppression_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\directional_sobel_edge_detection_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\emboss_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\exposure_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\filter_group.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\gaussian_blur_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\gaussian_blur_mono_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\glass_sphere_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\grayscale_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\hsb_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\hue_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\ios_blur_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\luminance_range_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\nearby_sampling3x3_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\non_maximum_suppression_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\pixellation_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\posterize_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\rgb_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\saturation_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\single_component_gaussian_blur_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\single_component_gaussian_blur_mono_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\sketch_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\smooth_toon_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\sobel_edge_detection_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\sphere_refraction_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\toon_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\weak_pixel_inclusion_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\source.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\source_camera.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\source_image.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\source_raw_data_input.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\target.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\target_raw_data_output.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\target_view.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\core_math_toolbox.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\core_util.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libyuv\compare.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libyuv\compare_common.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libyuv\compare_win.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libyuv\convert.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libyuv\convert_argb.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libyuv\convert_from.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libyuv\convert_from_argb.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libyuv\convert_to_argb.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libyuv\convert_to_i420.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libyuv\cpu_id.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libyuv\planar_functions.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libyuv\row_any.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libyuv\row_common.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libyuv\row_win.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libyuv\video_common.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glfw\glfw_context.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glfw\glfw_egl_context.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glfw\glfw_init.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glfw\glfw_input.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glfw\glfw_monitor.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glfw\glfw_osmesa_context.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glfw\glfw_wgl_context.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glfw\glfw_win32_init.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glfw\glfw_win32_joystick.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glfw\glfw_win32_monitor.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glfw\glfw_win32_thread.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glfw\glfw_win32_window.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glfw\glfw_window.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glew\glew.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libyuv\scale_win.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libyuv\scale.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libyuv\scale_any.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libyuv\scale_argb.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libyuv\scale_common.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libyuv\scale_rgb.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libyuv\scale_uv.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="core\core_framebuffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\core_framebuffer_cache.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\core_gl_program.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\core_gpupixel.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\core_gpupixel_context.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\core_gpupixel_macros.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\beauty_face_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\beauty_face_unit_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\bilateral_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\box_blur_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\box_difference_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\box_high_pass_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\box_mono_blur_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\brightness_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\canny_edge_detection_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\color_invert_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\color_matrix_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\contrast_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\convolution3x3_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\crosshatch_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\directional_non_maximum_suppression_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\directional_sobel_edge_detection_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\emboss_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\exposure_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\filter_group.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\gaussian_blur_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\gaussian_blur_mono_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\glass_sphere_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\grayscale_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\hsb_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\hue_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\ios_blur_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\luminance_range_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\nearby_sampling3x3_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\non_maximum_suppression_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\pixellation_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\posterize_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\rgb_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\saturation_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\single_component_gaussian_blur_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\single_component_gaussian_blur_mono_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\sketch_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\smooth_toon_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\sobel_edge_detection_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\sphere_refraction_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\toon_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\weak_pixel_inclusion_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\source.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\source_camera.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\source_image.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\source_raw_data_input.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\target.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\target_raw_data_output.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\target_view.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\core_math_toolbox.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\core_util.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libyuv\basic_types.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libyuv\compare.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libyuv\compare_row.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libyuv\convert.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libyuv\convert_argb.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libyuv\convert_from.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libyuv\convert_from_argb.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libyuv\cpu_id.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libyuv\planar_functions.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libyuv\row.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libyuv\version.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libyuv\video_common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libyuv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\stb_image.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glfw\glfw_egl_context.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glfw\glfw3.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glfw\glfw3native.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glfw\glfw_internal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glfw\glfw_mappings.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glfw\glfw_osmesa_context.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glfw\glfw_wgl_context.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glfw\glfw_win32_joystick.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glfw\glfw_win32_platform.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glew\eglew.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glew\glew.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glew\wglew.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libyuv\libyuv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libyuv\scale.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libyuv\scale_argb.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libyuv\scale_rgb.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libyuv\scale_row.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libyuv\scale_uv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

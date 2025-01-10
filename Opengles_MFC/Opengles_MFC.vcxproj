@@ -78,32 +78,32 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)\WXMedia_SDK\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</IncludePath>
-    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</ExternalIncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\opengles;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\opengles;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</ExternalIncludePath>
     <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\$(Platform)\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)\WXMedia_SDK\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</IncludePath>
-    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</ExternalIncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\opengles;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\opengles;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</ExternalIncludePath>
     <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\$(Platform)\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)\WXMedia_SDK\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</IncludePath>
-    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</ExternalIncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\opengles;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\opengles;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</ExternalIncludePath>
     <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\$(Platform)\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)\WXMedia_SDK\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</IncludePath>
-    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</ExternalIncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\opengles;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\opengles;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</ExternalIncludePath>
     <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\$(Platform)\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -113,10 +113,11 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\opengles</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <AdditionalLibraryDirectories>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\$(Platform)\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\$(Platform)\lib;$(OutDir);$(OutDir)\lib</AdditionalLibraryDirectories>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -136,10 +137,11 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\opengles</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <AdditionalLibraryDirectories>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\$(Platform)\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\$(Platform)\lib;$(OutDir);$(OutDir)\lib</AdditionalLibraryDirectories>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -161,12 +163,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\opengles</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\$(Platform)\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\$(Platform)\lib;$(OutDir);$(OutDir)\lib</AdditionalLibraryDirectories>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -188,12 +191,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\opengles</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\$(Platform)\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\$(Platform)\lib;$(OutDir);$(OutDir)\lib</AdditionalLibraryDirectories>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>

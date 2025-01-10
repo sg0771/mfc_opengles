@@ -46,6 +46,7 @@
 #ifdef __APPLE__
 #include <OpenGLES/ES3/gl.h>
 #else
+#define GL_GLEXT_PROTOTYPES 1
 #include <GLES3/gl3.h>
 #include <EGL/egl.h>
 #include <EGL/eglext.h>
